@@ -58,10 +58,135 @@ NOTE: you cant modify the elements. ITS COMPLETELY IMMutable.
 Importnat collection in scala:
 
   ARRAY:
-  LIST:
+      accsss and modify is possible. 
+      cant add/remove elements
+      drawback: Fixed size. both val and var. 
+      
   ARRAYBUFFER:
-  MAP:
-  Tupple:
+      mutable collection.
+      need to import it.
+      
+      scala> import scala.collection.mutable.ArrayBuffer;
+        import scala.collection.mutable.ArrayBuffer
+        
+      scala> var cars = new ArrayBuffer[String]()
+      var cars: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer()
+
+      scala> cars += "BMW";
+      val res8: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer(BMW)
+      
+      scala> cars += "AUDI";
+      val res9: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer(BMW, AUDI)
+
+      scala> cars += "MERCEDES";
+      val res10: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer(BMW, AUDI, MERCEDES)
+
+      scala> cars += "PORSCHE";
+      val res11: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer(BMW, AUDI, MERCEDES, PORSCHE)
+
+      scala> cars += "BUGATI";
+      val res12: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer(BMW, AUDI, MERCEDES, PORSCHE, BUGATI)
+
+      scala> cars += "ASTON";
+      val res13: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer(BMW, AUDI, MERCEDES, PORSCHE, BUGATI, ASTON)  
+      
+     other operations:
+     
+     scala> cars
+val res14: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer(BMW, AUDI, MERCEDES, PORSCHE, BUGATI, ASTON)
+
+scala> cars.insert(2,"bently");
+
+scala> cars.remove(2)
+val res23: String = bently
+
+scala> cars
+val res24: scala.collection.mutable.ArrayBuffer[String] = ArrayBuffer(BMW, AUDI, MERCEDES)
+
+scala>
+
+so am able to add elements..
+---------------------------------------------------------
+MAP:
+THERE IS A HOF MAP. THIS is DIFFERENT. IN THAT 'M' is small. HERE its 'M'
+THIS IS A COLLECTION.
+
+MAP(KEY,VALUE)
+  1. mutable Map
+  2. immutable Map - CANT ADD/REMOVE/MODIFY KEY VALAUE PAIR
+
+scala> Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
+val res25: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
+
+scala> val mapping = Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
+val mapping: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
+
+scala> var mapping = Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
+var mapping: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
+
+scala> mapping("NJ")
+val res26: String = NEW JERSEY
+
+scala> mapping("Nj")
+java.util.NoSuchElementException: key not found: Nj
+  at scala.collection.immutable.Map$Map2.apply(Map.scala:298)
+  ... 32 elided
+
+scala> mapping.keys
+val res28: Iterable[String] = Set(NY, NJ)
+
+scala> mapping.values
+val res29: Iterable[String] = Iterable(NEW YORK, NEW JERSEY)
+
+scala>
+scala> mapping("NY") = "NEW";
+       ^
+       error: value update is not a member of scala.collection.immutable.Map[String,String]
+       did you mean updated?
+       
+       
+MUTABLE MAP:
+scala> var states = scala.collection.mutable.Map("NY"-> "new york", "NJ"-> "new jersey");
+var states: scala.collection.mutable.Map[String,String] = HashMap(NY -> new york, NJ -> new jersey)
+
+scala> states+= ("CA"-> "california", "WY"-> "Wyomming");
+             ^
+       warning: method += in trait Growable is deprecated (since 2.13.0): Use `++=` aka `addAll` instead of varargs `+=`; infix operations with an operand of multiple args will be deprecated
+val res32: scala.collection.mutable.Map[String,String] = HashMap(WY -> Wyomming, NY -> new york, NJ -> new jersey, CA -> california)
+
+scala> states
+val res33: scala.collection.mutable.Map[String,String] = HashMap(WY -> Wyomming, NY -> new york, NJ -> new jersey, CA -> california)
+
+scala>
+
+Tupple: Collection of Heterogenious datatypes. ITS IMMUTABLE.
+
+
+scala>  var tupleEx= (101, "Robert", 250000 );
+var tuple: (Int, String, Int) = (101,Robert,250000)
+
+scala>
+
+ACCESS: tupleEx._1
+
+we use "._" a special symbol to access.
+
+NESTED TUPLE:
+scala> var tuple=("Raghu",(20,1.33),10000);
+var tuple: (String, (Int, Double), Int) = (Raghu,(20,1.33),10000)
+
+scala> tuple._1
+val res36: String = Raghu
+
+scala> tuple._2._1
+val res37: Int = 20
+
+scala> tuple._2._2
+val res38: Double = 1.33
+
+scala>
+
+
 
 -----------------------------
 Higher Order Function : A function which can accept another function as parameter.
