@@ -82,3 +82,17 @@ same e.g. with Announimious function.
 
 scala> z.map(i=>i*2);
 val res3: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
+
+
+scala> d.map(str => str.length)
+val res4: Array[Int] = Array(5, 6, 4, 3)
+
+scala> d.map(str => str.toUpperCase)
+val res6: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
+
+you can add "()" also: 
+scala> d.map(str => str.toUpperCase());
+val res7: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
+
+
+
