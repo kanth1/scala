@@ -55,3 +55,6 @@ scala>
 
 NOTE: you cant modify the elements. ITS COMPLETELY IMMutable.
 
+-----------------------------
+Higher Order Function : A function which can take another function as parameter.
+
