@@ -56,7 +56,7 @@ scala>
 NOTE: you cant modify the elements. ITS COMPLETELY IMMutable.
 
 -----------------------------
-Higher Order Function : A function which can take another function as parameter.
+Higher Order Function : A function which can accept another function as parameter.
 
 e.g.,
 
@@ -73,5 +73,7 @@ def doubler(a: Int): Int
 
 scala> z.map(doubler)
 val res1: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
+
+take every element of z and pass it to doubler.
 
 
