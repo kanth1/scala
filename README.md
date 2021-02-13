@@ -189,9 +189,63 @@ NESTED TUPLE:
 
     scala>
 
+ADVANCED SCALA:
+OOPS
+FP
 
+OOPS:
 
------------------------------
+    scala>
+    scala> class Emp {
+         | var name = ""
+         | var age = 0
+         | def getEmpDetails() = {
+         | println("Name " + this.name + " age" + age)
+         | }
+         | }
+    class Emp
+
+    scala> var emp1 = new EMP
+                          ^
+           error: not found: type EMP
+
+    scala> var emp1 = new Emp
+    var emp1: Emp = Emp@586af46
+
+    scala> var emp2 = new Emp
+    var emp2: Emp = Emp@57d1edf0
+
+    scala> emp1.name = "john"
+    // mutated emp1.name
+
+    scala> emp1.age = 20
+    // mutated emp1.age
+
+    scala> emp1
+    val res8: Emp = Emp@586af46
+
+    scala> emp2.age = 20
+    // mutated emp2.age
+
+    scala> emp.name = "Alice"
+           ^
+           error: not found: value emp
+
+    scala> emp2.name = "Alice"
+    // mutated emp2.name
+
+    scala> emp1.getEmpDetails()
+    Name john age20
+
+    scala> emp2.getEmpDetails()
+    Name Alice age20
+
+    scala>
+    
+Singleton:
+
+  
+---------------------------------------------------------------------------------------
 Higher Order Function : A function which can accept another function as parameter.
 
 Higher order:
