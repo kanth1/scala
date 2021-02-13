@@ -58,3 +58,20 @@ NOTE: you cant modify the elements. ITS COMPLETELY IMMutable.
 -----------------------------
 Higher Order Function : A function which can take another function as parameter.
 
+e.g.,
+
+scala> val z = Array(1,2,3,4,5,4,3,2,1)
+val z: Array[Int] = Array(1, 2, 3, 4, 5, 4, 3, 2, 1)
+
+
+scala> def doubler(a : Int) : Int = {
+     | val s = a*2
+     | return s;
+     | }
+def doubler(a: Int): Int
+
+
+scala> z.map(doubler)
+val res1: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
+
+
