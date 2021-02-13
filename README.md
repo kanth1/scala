@@ -55,8 +55,23 @@ scala>
 
 NOTE: you cant modify the elements. ITS COMPLETELY IMMutable.
 
+Importnat collection in scala:
+
+  ARRAY:
+  LIST:
+  ARRAYBUFFER:
+  MAP:
+  Tupple:
+
 -----------------------------
 Higher Order Function : A function which can accept another function as parameter.
+
+Higher order:
+  Built 
+  User defined 
+  
+  
+MAP is builtin higher order function.
 
 e.g.,
 
