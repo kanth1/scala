@@ -77,3 +77,8 @@ val res1: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
 take every element of z and pass it to doubler.
 
 
+Annonymous Function:
+same e.g. with Announimious function.
+
+scala> z.map(i=>i*2);
+val res3: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
