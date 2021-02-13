@@ -115,76 +115,76 @@ MAP(KEY,VALUE)
   1. mutable Map
   2. immutable Map - CANT ADD/REMOVE/MODIFY KEY VALAUE PAIR
 
-scala> Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
-val res25: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
+    scala> Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
+    val res25: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
 
-scala> val mapping = Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
-val mapping: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
+    scala> val mapping = Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
+    val mapping: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
 
-scala> var mapping = Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
-var mapping: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
+    scala> var mapping = Map("NY" -> "NEW YORK", "NJ" -> "NEW JERSEY");
+    var mapping: scala.collection.immutable.Map[String,String] = Map(NY -> NEW YORK, NJ -> NEW JERSEY)
 
-scala> mapping("NJ")
-val res26: String = NEW JERSEY
+    scala> mapping("NJ")
+    val res26: String = NEW JERSEY
 
-scala> mapping("Nj")
-java.util.NoSuchElementException: key not found: Nj
-  at scala.collection.immutable.Map$Map2.apply(Map.scala:298)
-  ... 32 elided
+    scala> mapping("Nj")
+    java.util.NoSuchElementException: key not found: Nj
+      at scala.collection.immutable.Map$Map2.apply(Map.scala:298)
+      ... 32 elided
 
-scala> mapping.keys
-val res28: Iterable[String] = Set(NY, NJ)
+    scala> mapping.keys
+    val res28: Iterable[String] = Set(NY, NJ)
 
-scala> mapping.values
-val res29: Iterable[String] = Iterable(NEW YORK, NEW JERSEY)
+    scala> mapping.values
+    val res29: Iterable[String] = Iterable(NEW YORK, NEW JERSEY)
 
-scala>
-scala> mapping("NY") = "NEW";
-       ^
-       error: value update is not a member of scala.collection.immutable.Map[String,String]
-       did you mean updated?
+    scala>
+    scala> mapping("NY") = "NEW";
+           ^
+           error: value update is not a member of scala.collection.immutable.Map[String,String]
+           did you mean updated?
        
        
 MUTABLE MAP:
-scala> var states = scala.collection.mutable.Map("NY"-> "new york", "NJ"-> "new jersey");
-var states: scala.collection.mutable.Map[String,String] = HashMap(NY -> new york, NJ -> new jersey)
+    scala> var states = scala.collection.mutable.Map("NY"-> "new york", "NJ"-> "new jersey");
+    var states: scala.collection.mutable.Map[String,String] = HashMap(NY -> new york, NJ -> new jersey)
 
-scala> states+= ("CA"-> "california", "WY"-> "Wyomming");
-             ^
-       warning: method += in trait Growable is deprecated (since 2.13.0): Use `++=` aka `addAll` instead of varargs `+=`; infix operations with an operand of multiple args will be deprecated
-val res32: scala.collection.mutable.Map[String,String] = HashMap(WY -> Wyomming, NY -> new york, NJ -> new jersey, CA -> california)
+    scala> states+= ("CA"-> "california", "WY"-> "Wyomming");
+                 ^
+           warning: method += in trait Growable is deprecated (since 2.13.0): Use `++=` aka `addAll` instead of varargs `+=`; infix operations with an operand of multiple args will be deprecated
+    val res32: scala.collection.mutable.Map[String,String] = HashMap(WY -> Wyomming, NY -> new york, NJ -> new jersey, CA -> california)
 
-scala> states
-val res33: scala.collection.mutable.Map[String,String] = HashMap(WY -> Wyomming, NY -> new york, NJ -> new jersey, CA -> california)
+    scala> states
+    val res33: scala.collection.mutable.Map[String,String] = HashMap(WY -> Wyomming, NY -> new york, NJ -> new jersey, CA -> california)
 
-scala>
+    scala>
 
-Tupple: Collection of Heterogenious datatypes. ITS IMMUTABLE.
+    Tupple: Collection of Heterogenious datatypes. ITS IMMUTABLE.
 
 
-scala>  var tupleEx= (101, "Robert", 250000 );
-var tuple: (Int, String, Int) = (101,Robert,250000)
+    scala>  var tupleEx= (101, "Robert", 250000 );
+    var tuple: (Int, String, Int) = (101,Robert,250000)
 
-scala>
+    scala>
 
-ACCESS: tupleEx._1
+    ACCESS: tupleEx._1
 
 we use "._" a special symbol to access.
 
 NESTED TUPLE:
-scala> var tuple=("Raghu",(20,1.33),10000);
-var tuple: (String, (Int, Double), Int) = (Raghu,(20,1.33),10000)
+    scala> var tuple=("Raghu",(20,1.33),10000);
+    var tuple: (String, (Int, Double), Int) = (Raghu,(20,1.33),10000)
 
-scala> tuple._1
-val res36: String = Raghu
+    scala> tuple._1
+    val res36: String = Raghu
 
-scala> tuple._2._1
-val res37: Int = 20
+    scala> tuple._2._1
+    val res37: Int = 20
 
-scala> tuple._2._2
-val res38: Double = 1.33
+    scala> tuple._2._2
+    val res38: Double = 1.33
 
-scala>
+    scala>
 
 
 
@@ -200,19 +200,19 @@ MAP is builtin higher order function.
 
 e.g.,
 
-scala> val z = Array(1,2,3,4,5,4,3,2,1)
-val z: Array[Int] = Array(1, 2, 3, 4, 5, 4, 3, 2, 1)
+    scala> val z = Array(1,2,3,4,5,4,3,2,1)
+    val z: Array[Int] = Array(1, 2, 3, 4, 5, 4, 3, 2, 1)
 
 
-scala> def doubler(a : Int) : Int = {
-     | val s = a*2
-     | return s;
-     | }
-def doubler(a: Int): Int
+    scala> def doubler(a : Int) : Int = {
+         | val s = a*2
+         | return s;
+         | }
+    def doubler(a: Int): Int
 
 
-scala> z.map(doubler)
-val res1: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
+    scala> z.map(doubler)
+    val res1: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
 
 take every element of z and pass it to doubler.
 
@@ -220,15 +220,15 @@ take every element of z and pass it to doubler.
 Annonymous Function:
 same e.g. with Announimious function.
 
-scala> z.map(i=>i*2);
-val res3: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
+    scala> z.map(i=>i*2);
+    val res3: Array[Int] = Array(2, 4, 6, 8, 10, 8, 6, 4, 2)
 
 
-scala> d.map(str => str.length)
-val res4: Array[Int] = Array(5, 6, 4, 3)
+    scala> d.map(str => str.length)
+    val res4: Array[Int] = Array(5, 6, 4, 3)
 
-scala> d.map(str => str.toUpperCase)
-val res6: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
+    scala> d.map(str => str.toUpperCase)
+    val res6: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
 
 you can add "()" also: 
 scala> d.map(str => str.toUpperCase());
