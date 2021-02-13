@@ -147,6 +147,7 @@ MAP(KEY,VALUE)
        
        
 MUTABLE MAP:
+
     scala> var states = scala.collection.mutable.Map("NY"-> "new york", "NJ"-> "new jersey");
     var states: scala.collection.mutable.Map[String,String] = HashMap(NY -> new york, NJ -> new jersey)
 
