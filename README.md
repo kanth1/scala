@@ -1,3 +1,7 @@
+Google drive: https://drive.google.com/file/d/1sUyAzRdhyvtqxFtCLi2n73HZDdGvgAhv/view?usp=sharing
+
+
+
 # scala
 #basic of Scala
 
@@ -248,6 +252,8 @@ starting point of a project
 How to RUN scala in IDE:
   have main
   extends App trait
+  
+Case class: like POJO class in java.
   
   
 ---------------------------------------------------------------------------------------
