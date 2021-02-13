@@ -243,7 +243,12 @@ OOPS:
     scala>
     
 Singleton:
+starting point of a project
 
+How to RUN scala in IDE:
+  have main
+  extends App trait
+  
   
 ---------------------------------------------------------------------------------------
 Higher Order Function : A function which can accept another function as parameter.
