@@ -173,6 +173,7 @@ MUTABLE MAP:
 we use "._" a special symbol to access.
 
 NESTED TUPLE:
+    
     scala> var tuple=("Raghu",(20,1.33),10000);
     var tuple: (String, (Int, Double), Int) = (Raghu,(20,1.33),10000)
 
