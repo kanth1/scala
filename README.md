@@ -231,8 +231,9 @@ same e.g. with Announimious function.
     val res6: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
 
 you can add "()" also: 
-scala> d.map(str => str.toUpperCase());
-val res7: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
+
+    scala> d.map(str => str.toUpperCase());
+    val res7: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
 
 
 
