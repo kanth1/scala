@@ -291,7 +291,51 @@ Companion Object - common name for both class name & object.
 ------------------
 when you have 1000's of classes and have one starting poiny you use it.
 
+---------------------------------------------------------------------------------------
+Inheritance
+------------
 
+
+---------------------------------------------------------------------------------------
+
+Traits: 
+-----------
+similar to Interfaces of java class
+        No instatiation possible similar to interface.
+        Scala also doesnt support multiple Inheritance
+        class can inherit multiple traits
+
+---------------------------------------------------------------------------------------
+
+Implicit class
+---------------
+
+   directly create an obj w/o object creation code.
+   way to create a utility classes. - implicit conversion of objects
+   implicit k/w says that no need to create a object to call.
+    scala>
+
+    scala> implicit class StringIncr(s: String){
+         | def incr = s.map(c => (c + 1 ).toChar)
+         | }
+    class StringIncr
+
+    with object creation.
+    
+    scala> val a = new StringIncr("Hello")
+    val a: StringIncr = StringIncr@1b3ba1e3
+
+    scala> a.incr
+    val res9: String = Ifmmp
+
+    with the implicit option(without object creation)
+    
+    scala> "BYE".incr
+    val res10: String = CZF
+
+    scala>
+    
+  
 ---------------------------------------------------------------------------------------
 Higher Order Function : A function which can accept another function as parameter.
 
