@@ -285,7 +285,11 @@ its similar to java switch case
          | case _ => "other than 0-3"
          | }
     val res2: String = other than 0-3
-    
+------------------------------------------------------------------------------------------------------------------------    
+
+Companion Object - common name for both class name & object.
+------------------
+when you have 1000's of classes and have one starting poiny you use it.
 
 
 ---------------------------------------------------------------------------------------
