@@ -303,5 +303,5 @@ you can add "()" also:
     scala> d.map(str => str.toUpperCase());
     val res7: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
 
-
+  
 
