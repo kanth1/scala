@@ -313,6 +313,7 @@ Implicit class
    directly create an obj w/o object creation code.
    way to create a utility classes. - implicit conversion of objects
    implicit k/w says that no need to create a object to call.
+   worksonly with single class
     scala>
 
     scala> implicit class StringIncr(s: String){
@@ -334,10 +335,12 @@ Implicit class
     val res10: String = CZF
 
     scala>
-    
   
 ---------------------------------------------------------------------------------------
-Higher Order Function : A function which can accept another function as parameter.
+Higher Order Function
+---------------------
+   Fuctional paradigm.
+   A function which can accept another function as parameter.
 
 Higher order:
   Built 
@@ -364,8 +367,10 @@ e.g.,
 
 take every element of z and pass it to doubler.
 
-
+---------------------------------------------------------------------------------------
 Annonymous Function:
+-----------------------
+
 same e.g. with Announimious function.
 
     scala> z.map(i=>i*2);
@@ -383,5 +388,15 @@ you can add "()" also:
     scala> d.map(str => str.toUpperCase());
     val res7: Array[String] = Array(SPARK, HADOOP, HIVE, PIG)
 
-  
+---------------------------------------------------------------------------------------
+Partially Applied Function:
+-----------------------
+   facility which allows to call a function with partial values. and call it again when all are ready.
+   
+---------------------------------------------------------------------------------------
+Currying
+--------
+
+
+
 
