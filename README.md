@@ -149,8 +149,9 @@ MAP(KEY,VALUE)
            error: value update is not a member of scala.collection.immutable.Map[String,String]
            did you mean updated?
        
-       
+------------------------------------------------------------------------------------------------------------------------       
 MUTABLE MAP:
+------------------------------------------------------------------------------------------------------------------------
 
     scala> var states = scala.collection.mutable.Map("NY"-> "new york", "NJ"-> "new jersey");
     var states: scala.collection.mutable.Map[String,String] = HashMap(NY -> new york, NJ -> new jersey)
@@ -177,7 +178,9 @@ MUTABLE MAP:
 
 we use "._" a special symbol to access.
 
-NESTED TUPLE:
+------------------------------------------------------------------------------------------------------------------------
+NESTED TUPLE: Tuple inside another tuple.
+------------------------------------------------------------------------------------------------------------------------
     
     scala> var tuple=("Raghu",(20,1.33),10000);
     var tuple: (String, (Int, Double), Int) = (Raghu,(20,1.33),10000)
@@ -192,8 +195,10 @@ NESTED TUPLE:
     val res38: Double = 1.33
 
     scala>
-
+    
+------------------------------------------------------------------------------------------------------------------------
 ADVANCED SCALA:
+------------------------------------------------------------------------------------------------------------------------
 OOPS
 FP
 
@@ -245,17 +250,44 @@ OOPS:
     Name Alice age20
 
     scala>
-    
-Singleton:
-starting point of a project
 
+------------------------------------------------------------------------------------------------------------------------
+Singleton:starting point of a project
+
+------------------------------------------------------------------------------------------------------------------------
 How to RUN scala in IDE:
   have main
   extends App trait
-  
+
+------------------------------------------------------------------------------------------------------------------------
 Case class: like POJO class in java.
-  
-  
+-------------------------------------
+            no new k/w used.
+            it’s a utility class.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Pattern Matching:
+------------------
+its similar to java switch case
+
+    scala> import scala.util.Random
+    import scala.util.Random
+
+    scala> val rdmValue = Random.nextInt(10)
+    val rdmValue: Int = 8
+
+    scala> rdmValue match {
+         | case 0 => "Zero"
+         | case 1 => "One"
+         | case 2 => "Two"
+         | case 3 => "three"
+         | case _ => "other than 0-3"
+         | }
+    val res2: String = other than 0-3
+    
+
+
 ---------------------------------------------------------------------------------------
 Higher Order Function : A function which can accept another function as parameter.
 
